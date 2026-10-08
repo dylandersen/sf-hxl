@@ -1,0 +1,725 @@
+{
+  "skill": "salesforce-hxl",
+  "snapshot_date": "2026-10-08",
+  "api_baseline": "67.0",
+  "phase": "beta",
+  "coverage": {
+    "hxl-guide": 21,
+    "hxl-reference": 25,
+    "platform-dependency": 23,
+    "navigation": 2
+  },
+  "scope": "Entire published HXL guide and reference navigation; directly linked platform implementation pages plus hosted MCP setup/troubleshooting dependencies. Not the entire Salesforce documentation universe.",
+  "sources": [
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/guide/agentforce-action-output.html",
+      "title": "Build a Rich UI for Agentforce Action Output",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.106627+00:00",
+      "raw_html_sha256": "267b39878623763d32484783276a53cd0e4ede08db77f5beab1b42afa3e431d3",
+      "kind": "hxl-guide",
+      "local_reference": "references/agentforce.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/guide/get-started.html",
+      "title": "Get Started",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.106723+00:00",
+      "raw_html_sha256": "ecc930e4b751272f8d68f5eead43b2dc7beb09ce7b7603201bd3cbb84cf45dc2",
+      "kind": "hxl-guide",
+      "local_reference": "SKILL.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/guide/hxl-mcp-apex.html",
+      "title": "Create the Apex Invocable Action",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.106742+00:00",
+      "raw_html_sha256": "0170f0e0f29b34bab0856968059c86e88d438be081be38ed177b9cd2d7322722",
+      "kind": "hxl-guide",
+      "local_reference": "references/mcp.md#invocable-action",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/guide/hxl-mcp-channels.html",
+      "title": "Build a Rich UI for External Agents",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.106756+00:00",
+      "raw_html_sha256": "eb5edf6ef265f8768095b04d68894eb0f776c262decb2e4a49d4bf032d8d6183",
+      "kind": "hxl-guide",
+      "local_reference": "references/mcp.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/guide/hxl-mcp-server.html",
+      "title": "Create a Custom MCP Server",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.106770+00:00",
+      "raw_html_sha256": "a7cbd10d74e7b6e0b3673b1968de0a09916d4507e20749d4a7e8c4cdcb4a0fe4",
+      "kind": "hxl-guide",
+      "local_reference": "references/mcp.md#configure-server-resources",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/guide/hxl-mcp-setup-client.html",
+      "title": "Connect Your MCP Client to Your Org",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.106783+00:00",
+      "raw_html_sha256": "b832596073b0e1b5242c9349d19d91d354dc18b82f1327c38a840332f2dfd9e2",
+      "kind": "hxl-guide",
+      "local_reference": "references/mcp.md#connect-and-verify-clients",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/guide/hxl-mcp-setup-org.html",
+      "title": "Set Up Your Org for MCP Access",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.106798+00:00",
+      "raw_html_sha256": "baf092bf3b889cbdf805e82188f734b53200124cc05915ff2bbf5705f7ecd91b",
+      "kind": "hxl-guide",
+      "local_reference": "references/org-deployment.md#mcp-oauth-and-access",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/guide/hxl-release-notes.html",
+      "title": "Release Notes",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.106811+00:00",
+      "raw_html_sha256": "1fd19606548b46a6966660891b0e172e6254cd9f6dc24fa3ae0b5a327d5a98fd",
+      "kind": "hxl-guide",
+      "local_reference": "references/troubleshooting.md#documentation-inconsistencies",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/guide/hxl-rich-ui.html",
+      "title": "Learn About HXL",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.106825+00:00",
+      "raw_html_sha256": "3921004699e1b1fb5d34a795ed7fb428a7bfccf209207f47baa9eba64f6743ec",
+      "kind": "hxl-guide",
+      "local_reference": "references/authoring.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/guide/hxl-vibes.html",
+      "title": "Use Agentforce Vibes to Build Widgets",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.106841+00:00",
+      "raw_html_sha256": "0fbc04e40450e27bafbc7e33588125b9749b11799ea949941edfcc2a89864ea4",
+      "kind": "hxl-guide",
+      "local_reference": "references/playground-vibes.md#vibes-workflow",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/guide/hxl-widget-composition.html",
+      "title": "Composition File",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.106854+00:00",
+      "raw_html_sha256": "25833d6416f8b5f938eff5ff451906597e5b720cf9b972f3770aedf9f3f811a8",
+      "kind": "hxl-guide",
+      "local_reference": "references/authoring.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/guide/hxl-widget-configuration.html",
+      "title": "Widget Configuration File",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.106867+00:00",
+      "raw_html_sha256": "6d834af7d83bb439978cbc2b39c799a3a2d68c87605af125f9d8f578d393e800",
+      "kind": "hxl-guide",
+      "local_reference": "references/authoring.md#bundle-files",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/guide/hxl-widget-example-mapping-mcp.html",
+      "title": "Mapping a Hotel Card Widget for MCP",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.106880+00:00",
+      "raw_html_sha256": "4ba88b597997f7185520fcb904e43274256c37b467bb6b964a6ecb0c50c9f931",
+      "kind": "hxl-guide",
+      "local_reference": "references/mcp.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/guide/hxl-widget-example-mapping.html",
+      "title": "Mapping a Hotel Card Widget for Agentforce",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.106892+00:00",
+      "raw_html_sha256": "557bab29ef0f55ffc09670330ea6a7a1ce7fbddc0b6aac8b99b086588451f061",
+      "kind": "hxl-guide",
+      "local_reference": "references/agentforce.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/guide/hxl-widget-example.html",
+      "title": "Widget Example",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.106905+00:00",
+      "raw_html_sha256": "07c08523ceb30202e427665ea80ff30b69b00201a75fea5172d81c89a22f1ae4",
+      "kind": "hxl-guide",
+      "local_reference": "references/authoring.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/guide/hxl-widget-schema.html",
+      "title": "Schema File",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.106917+00:00",
+      "raw_html_sha256": "731ba4494104d0edd4e56cad3f8e4702ddb7996508ab0b48e41e5bf9400546a8",
+      "kind": "hxl-guide",
+      "local_reference": "references/authoring.md#attribute-schema",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/guide/hxl-widgets-glossary.html",
+      "title": "Glossary",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.106931+00:00",
+      "raw_html_sha256": "53128bf738ee6334fb3308ec6e908340dd2ac1b592ca5de4305378c8b41d67eb",
+      "kind": "hxl-guide",
+      "local_reference": "references/type-contracts.md#terminology",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/guide/playground-components.html",
+      "title": "Use HXL Components",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.106943+00:00",
+      "raw_html_sha256": "285bcc9b13198c3dc15d0c805a0d7e1b9abac0ede9db94e63dce10ba0259b01f",
+      "kind": "hxl-guide",
+      "local_reference": "references/playground-vibes.md#playground-authoring",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/guide/playground-widgets.html",
+      "title": "Create Widgets",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.106956+00:00",
+      "raw_html_sha256": "d582eef1a312d2e05a12ea09189345f6803c6652b412d897e8fe8b6651bdbaed",
+      "kind": "hxl-guide",
+      "local_reference": "references/playground-vibes.md#playground-authoring",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/guide/playground.html",
+      "title": "Explore Widgets in HXL Playground",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.106968+00:00",
+      "raw_html_sha256": "500df2dd990bb80b4176cd8d5ab0c8555d89986d276e5568e57841c675109472",
+      "kind": "hxl-guide",
+      "local_reference": "references/playground-vibes.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/guide/prerequisites.html",
+      "title": "Prerequisites",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.106981+00:00",
+      "raw_html_sha256": "c9ae490d11f34fc1ea4d4fab5f532103401efcfede08887ac2ebae2153bc73f9",
+      "kind": "hxl-guide",
+      "local_reference": "references/org-deployment.md#hxl-prerequisites",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/overview",
+      "title": "Headless Experience Layer",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.106987+00:00",
+      "raw_html_sha256": "7e9afe6ed7a28dba956da6943b866723c96fbfc2c55496c439b857c86e2c7328",
+      "kind": "navigation",
+      "local_reference": "references/sources.md",
+      "representation": "navigation/coverage discovery"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/references",
+      "title": "Headless Experience Layer (HXL) Reference",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.106993+00:00",
+      "raw_html_sha256": "c5780eb2d99cb38c937cb893c457c38f4897c36d1731ed01db1fd78d5654cc35",
+      "kind": "navigation",
+      "local_reference": "references/sources.md",
+      "representation": "navigation/coverage discovery"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/about-hxl-components.html",
+      "title": "Headless Experience Layer (HXL) Reference",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107011+00:00",
+      "raw_html_sha256": "a7bd0fa12313eed8f9dd0e5339402fe1faaeab5f6ea7e55a9a8795a2f4145244",
+      "kind": "hxl-reference",
+      "local_reference": "references/components.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/accordion.html",
+      "title": "Headless Experience Layer (HXL) Reference",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107029+00:00",
+      "raw_html_sha256": "59d16295db0d90a7e47b8a53b8520d05959e12f99b45f5652ae30275238cf94f",
+      "kind": "hxl-reference",
+      "local_reference": "references/components/accordion.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/accordionItem.html",
+      "title": "Headless Experience Layer (HXL) Reference",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107044+00:00",
+      "raw_html_sha256": "ab5c86c38053ea14719bacf64780e283112d68f71aa369fc674282488ab196c8",
+      "kind": "hxl-reference",
+      "local_reference": "references/components/accordionItem.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/avatar.html",
+      "title": "Headless Experience Layer (HXL) Reference",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107059+00:00",
+      "raw_html_sha256": "36d94ad2ddd9ed81e186fcd66aa872fcc4cc3c21ac628e0b5c8fca57a68026ed",
+      "kind": "hxl-reference",
+      "local_reference": "references/components/avatar.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/badge.html",
+      "title": "Headless Experience Layer (HXL) Reference",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107072+00:00",
+      "raw_html_sha256": "743d0f161bcf04be1a718c7cdb8aefc52da6a75423e32c6af5a6559ee94c5746",
+      "kind": "hxl-reference",
+      "local_reference": "references/components/badge.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/button.html",
+      "title": "Headless Experience Layer (HXL) Reference",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107086+00:00",
+      "raw_html_sha256": "5eb240fa7b69271fd481c213d1ad0b62efc86c28cb51b799ac6e1104794d00df",
+      "kind": "hxl-reference",
+      "local_reference": "references/components/button.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/callout.html",
+      "title": "Headless Experience Layer (HXL) Reference",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107099+00:00",
+      "raw_html_sha256": "94fb779f420ef25ec53dfa569059ce753e485e24c2bb54557c267a3ed9afb733",
+      "kind": "hxl-reference",
+      "local_reference": "references/components/callout.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/code.html",
+      "title": "Headless Experience Layer (HXL) Reference",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107116+00:00",
+      "raw_html_sha256": "ce121fa55f5e32e488324cf947256c579853cc9a5a54eedf8c19ff5ff8e6ec83",
+      "kind": "hxl-reference",
+      "local_reference": "references/components/code.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/column.html",
+      "title": "Headless Experience Layer (HXL) Reference",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107129+00:00",
+      "raw_html_sha256": "07a4744fb4952f55b7f9f6cf79d8ca85a5a72cb11aa92981daa03073cd896e33",
+      "kind": "hxl-reference",
+      "local_reference": "references/components/column.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/container.html",
+      "title": "Headless Experience Layer (HXL) Reference",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107142+00:00",
+      "raw_html_sha256": "1ab5f17a05986939419855ad3cb4d0878463dff85a38616057735ee7855964a1",
+      "kind": "hxl-reference",
+      "local_reference": "references/components/container.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/hxl-lightning-types.html",
+      "title": "Headless Experience Layer (HXL) Reference",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107157+00:00",
+      "raw_html_sha256": "29ca4e2b192fe4f71ffa68728556a7cbebf8c7d4fc7d4f324787a5880ad070a1",
+      "kind": "hxl-reference",
+      "local_reference": "references/type-contracts.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/hxl-widgets-glossary.html",
+      "title": "Headless Experience Layer (HXL) Reference",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107169+00:00",
+      "raw_html_sha256": "71002ef0683357547bb4cf61489e7352e3b2088bdc2dc74728a94265b95c580f",
+      "kind": "hxl-reference",
+      "local_reference": "references/type-contracts.md#terminology",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/icon.html",
+      "title": "Headless Experience Layer (HXL) Reference",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107185+00:00",
+      "raw_html_sha256": "e84dee3222a20fa528839ebe31520e266ba1728a7b4171ffa82528be8125a451",
+      "kind": "hxl-reference",
+      "local_reference": "references/components/icon.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/image.html",
+      "title": "Headless Experience Layer (HXL) Reference",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107199+00:00",
+      "raw_html_sha256": "54b458456b225749f710a2d1d28d0353bbd064971e4564790a9f114d4707d48a",
+      "kind": "hxl-reference",
+      "local_reference": "references/components/image.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/link.html",
+      "title": "Headless Experience Layer (HXL) Reference",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107215+00:00",
+      "raw_html_sha256": "5ce3d13c66fe957444c72c6a4ad265171abc9d022a4f83b680d3942445ca6358",
+      "kind": "hxl-reference",
+      "local_reference": "references/components/link.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/list.html",
+      "title": "Headless Experience Layer (HXL) Reference",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107229+00:00",
+      "raw_html_sha256": "44705d68ab78f41f218f6680f92d3d6a3b05f79948b9fe7d5bbf7932b43d7f85",
+      "kind": "hxl-reference",
+      "local_reference": "references/components/list.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/listItem.html",
+      "title": "Headless Experience Layer (HXL) Reference",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107243+00:00",
+      "raw_html_sha256": "dd86f89d674f3bfd53df0658f5c27deda45b2e3aa525ac7129543493c194bc03",
+      "kind": "hxl-reference",
+      "local_reference": "references/components/listItem.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/markdown.html",
+      "title": "Headless Experience Layer (HXL) Reference",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107256+00:00",
+      "raw_html_sha256": "f9dfcf6f785ce2f4050a42776294fe2d8ed9ce945086bef7907a4444444b5b87",
+      "kind": "hxl-reference",
+      "local_reference": "references/components/markdown.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/progress.html",
+      "title": "Headless Experience Layer (HXL) Reference",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107269+00:00",
+      "raw_html_sha256": "513abdec5ec5cb982c36a73fa367ff10d8097a350b27a900d3f1ab4c147cba32",
+      "kind": "hxl-reference",
+      "local_reference": "references/components/progress.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/row.html",
+      "title": "Headless Experience Layer (HXL) Reference",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107286+00:00",
+      "raw_html_sha256": "2dbb727a1e3689c650603af539ad5251f8921809cb050fa01e0410e358cea374",
+      "kind": "hxl-reference",
+      "local_reference": "references/components/row.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/separator.html",
+      "title": "Headless Experience Layer (HXL) Reference",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107299+00:00",
+      "raw_html_sha256": "499225be4e8df522eae8630de49d1dd1f0406078b5eeca349ed1100f6d3a4232",
+      "kind": "hxl-reference",
+      "local_reference": "references/components/separator.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/spacer.html",
+      "title": "Headless Experience Layer (HXL) Reference",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107316+00:00",
+      "raw_html_sha256": "de90ffcc2ad4d5bd9a5cbf4012df0127b4499b9f2d337a8d6b9c761d52f97454",
+      "kind": "hxl-reference",
+      "local_reference": "references/components/spacer.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/spinner.html",
+      "title": "Headless Experience Layer (HXL) Reference",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107329+00:00",
+      "raw_html_sha256": "67308dbdaade9bc697075a33e8f6a3660d9aa6512a3781475858591fb646760b",
+      "kind": "hxl-reference",
+      "local_reference": "references/components/spinner.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/table.html",
+      "title": "Headless Experience Layer (HXL) Reference",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107344+00:00",
+      "raw_html_sha256": "6c3f3b5ef396853e1666cb50858d4fc0f4305005ff0ec7a34ebb8b29e33f5a9e",
+      "kind": "hxl-reference",
+      "local_reference": "references/components/table.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/text.html",
+      "title": "Headless Experience Layer (HXL) Reference",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107357+00:00",
+      "raw_html_sha256": "e90f5985e0554bf08d41bed183befbce42880fb94d6efab1678f182d7b4c7e5a",
+      "kind": "hxl-reference",
+      "local_reference": "references/components/text.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/agentforcevibes/guide/afv-get-started.html",
+      "title": "Get Started",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107372+00:00",
+      "raw_html_sha256": "06d6e103d33d64cebdf1485cdf4a2e67a97b10e25c2aca683ecca2d6c77b9939",
+      "kind": "platform-dependency",
+      "local_reference": "references/playground-vibes.md#vibes-workflow",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/agentforcevibes/guide/afv-overview.html",
+      "title": "Agentforce Vibes Overview",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107385+00:00",
+      "raw_html_sha256": "564a812fa65f32accd1079e9ed4a946e413ccf130c58321dfd5234414df66368",
+      "kind": "platform-dependency",
+      "local_reference": "references/playground-vibes.md#vibes-workflow",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/chatgpt.html",
+      "title": "Configure ChatGPT",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107397+00:00",
+      "raw_html_sha256": "d50250c62942d7f8d0f5c0d12bfbd41c151dff4595b77c5f18f190a044a88d75",
+      "kind": "platform-dependency",
+      "local_reference": "references/mcp.md#connect-and-verify-clients",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/claude.html",
+      "title": "Configure Claude",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107410+00:00",
+      "raw_html_sha256": "25a50d599bbfcc589f92d8d962aea0d53d2975ce00a3c57e49b292986f0ae96c",
+      "kind": "platform-dependency",
+      "local_reference": "references/mcp.md#connect-and-verify-clients",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/hosted-mcp-servers-overview.html",
+      "title": "Get Started",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107422+00:00",
+      "raw_html_sha256": "a10abf8de9456a71a33b759566a92f630b9ed2cc6774a67c2efc9b0fe28d3ea9",
+      "kind": "platform-dependency",
+      "local_reference": "references/mcp.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/invocable-actions.html",
+      "title": "Invocable Actions",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107435+00:00",
+      "raw_html_sha256": "f0e27c8cbe4363ea9f1d500737cc7615e4cd970437adb229c3461ee519775361",
+      "kind": "platform-dependency",
+      "local_reference": "references/mcp.md#invocable-action",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/setup-overview.html",
+      "title": "Set Up Your Org",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107448+00:00",
+      "raw_html_sha256": "c9cd6c58cde3d042d0afbf80549e0dc88913cabc99b3123adb9186dc6537cd78",
+      "kind": "platform-dependency",
+      "local_reference": "references/org-deployment.md#mcp-oauth-and-access",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/lightning-types/guide/lightning-types-apex.html",
+      "title": "Apex-Based Custom Lightning Types",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107463+00:00",
+      "raw_html_sha256": "f36d58cba62d4e1158066d915a6d1d893fc1a7126aa6cbc8c4d63cbef3492fb6",
+      "kind": "platform-dependency",
+      "local_reference": "references/agentforce.md#new-apex-data-types",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/lightning-types/guide/lightning-types-core.html",
+      "title": "Core Concepts of Custom Lightning Types",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107479+00:00",
+      "raw_html_sha256": "e880af97d2181a532ac57cb8d8c04df15fafdccaa3beb267a98d2c24e7914235",
+      "kind": "platform-dependency",
+      "local_reference": "references/type-contracts.md#custom-lightning-type-contracts",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/lightning-types/guide/lightning-types-object.html",
+      "title": "Object-Based Custom Lightning Types",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107492+00:00",
+      "raw_html_sha256": "a5202656b496823d730cdeb0cadc5452009980b587090d9a6c03f0b66d98564e",
+      "kind": "platform-dependency",
+      "local_reference": "references/type-contracts.md#custom-lightning-type-contracts",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/lightning-types/guide/lightning-types-skills.html",
+      "title": "Use Agentforce Vibes to Build Custom Lightning Types",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107504+00:00",
+      "raw_html_sha256": "0669a3c6e8cbebb185db606b8a5abad287d9bbc5c82d54d793b526d191c83b7a",
+      "kind": "platform-dependency",
+      "local_reference": "references/playground-vibes.md#vibes-workflow",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/lightning-types/guide/lightning-types.html",
+      "title": "Get Started with Lightning Types",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107516+00:00",
+      "raw_html_sha256": "4693b491d9a4c3f682672dfdc19d1073df8a7423d1f54eaad12a6187863e5378",
+      "kind": "platform-dependency",
+      "local_reference": "references/type-contracts.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/lightning-types/references/lightning-types/lightning-types-glossary.html",
+      "title": "Lightning Types",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107529+00:00",
+      "raw_html_sha256": "a3a7ae91090eda4c23b5bd48707a9870c1d7a30dcc614c7fcfad5058f3c9f2d3",
+      "kind": "platform-dependency",
+      "local_reference": "references/type-contracts.md#terminology",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/lightning-types/references/lightning-types/lightning-types-reference.html",
+      "title": "Lightning Types",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107544+00:00",
+      "raw_html_sha256": "27a3acdc480fcd5187746415530df6b38a082846ac34a4591f878f4cb1bba949",
+      "kind": "platform-dependency",
+      "local_reference": "references/type-contracts.md#scalar-and-object-inputs",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/salesforce-cli-reference/guide/cli_reference_project.html",
+      "title": "project Commands",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107560+00:00",
+      "raw_html_sha256": "6263e89a52e0df6f04c9a48de034eb124e17d4a0aeede51417b973dce5f6a263",
+      "kind": "platform-dependency",
+      "local_reference": "references/org-deployment.md#cli-operations",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/create-external-client-app.html",
+      "title": "Create an External Client App",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107572+00:00",
+      "raw_html_sha256": "c8f8687dab605aeacf6d8ba3722d4704f026143902a3198777d0b19a44fe6971",
+      "kind": "platform-dependency",
+      "local_reference": "references/org-deployment.md#mcp-oauth-and-access",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/log-into-org.html",
+      "title": "Log Into Your Org",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107589+00:00",
+      "raw_html_sha256": "5585f44a0c37b22a94da90f6de5593b5f3f6d3d0bacdd4b1ce0e84fd6031f6a7",
+      "kind": "platform-dependency",
+      "local_reference": "references/org-deployment.md#mcp-oauth-and-access",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/activate-mcp-servers.html",
+      "title": "Activate MCP Servers",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107607+00:00",
+      "raw_html_sha256": "ad94fd97fd572fa3318bda56a00e06d9c79046998ae66befc31e0d07555afa7e",
+      "kind": "platform-dependency",
+      "local_reference": "references/org-deployment.md#mcp-oauth-and-access",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/custom-servers.html",
+      "title": "Build Custom MCP Servers",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107619+00:00",
+      "raw_html_sha256": "ae50c4a5dc0ac217e6d7610542a646e61a9dba411eb3119682a83c88418b9b37",
+      "kind": "platform-dependency",
+      "local_reference": "references/mcp.md",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/test-connection.html",
+      "title": "Test MCP Clients",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107631+00:00",
+      "raw_html_sha256": "bfbbeab1ea42c51c1c2456093f3d06cb8f2c438cc5ebabf7aad2171d3541b4a4",
+      "kind": "platform-dependency",
+      "local_reference": "references/troubleshooting.md#diagnose-by-layer",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/connection-issues.html",
+      "title": "Server Connection Failures",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107648+00:00",
+      "raw_html_sha256": "89627192dce371828bc4a0f4fd2a4ccc1146f154b2d0626e0765aa38d0632a7b",
+      "kind": "platform-dependency",
+      "local_reference": "references/troubleshooting.md#diagnose-by-layer",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/authentication-issues.html",
+      "title": "Authentication Issues",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107660+00:00",
+      "raw_html_sha256": "4b001e3f3b05583e725ced213a34920136a3981cb931c1fac8c0da85fd00dd23",
+      "kind": "platform-dependency",
+      "local_reference": "references/troubleshooting.md#diagnose-by-layer",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/execution-issues.html",
+      "title": "Prompt Run Failures",
+      "captured_date": "2026-10-08",
+      "retrieved_at_utc": "2026-10-08T16:25:28.107678+00:00",
+      "raw_html_sha256": "a25c58ec7306e56e6ce77a3e55c8a2262f1027131f742cfa388126bc8eef0ab9",
+      "kind": "platform-dependency",
+      "local_reference": "references/troubleshooting.md#diagnose-by-layer",
+      "representation": "distilled facts, original examples, and workflow guidance"
+    }
+  ]
+}

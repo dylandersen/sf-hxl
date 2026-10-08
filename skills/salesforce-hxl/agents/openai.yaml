@@ -1,0 +1,3 @@
+interface:
+  display_name: "Salesforce HXL"
+  short_description: "Build Salesforce HXL widgets for Agentforce and MCP"

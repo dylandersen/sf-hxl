@@ -1,0 +1,668 @@
+{
+  "tile/accordion": {
+    "properties": {},
+    "soft_required": [],
+    "source": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/accordion.html"
+  },
+  "tile/accordionItem": {
+    "properties": {
+      "iconAlt": {
+        "required": false,
+        "lightning_type": "lightning__textType",
+        "default": null
+      },
+      "iconName": {
+        "required": false,
+        "lightning_type": "lightning__iconName",
+        "default": null
+      },
+      "isExpanded": {
+        "required": false,
+        "lightning_type": "lightning__booleanType",
+        "default": "false"
+      },
+      "subtitle": {
+        "required": false,
+        "lightning_type": "lightning__textType",
+        "default": null
+      },
+      "title": {
+        "required": true,
+        "lightning_type": "lightning__textType",
+        "default": null
+      }
+    },
+    "soft_required": [],
+    "source": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/accordionItem.html"
+  },
+  "tile/avatar": {
+    "properties": {
+      "alt": {
+        "required": false,
+        "lightning_type": "lightning__textType",
+        "default": null
+      },
+      "iconName": {
+        "required": false,
+        "lightning_type": "lightning__iconName",
+        "default": null
+      },
+      "initials": {
+        "required": false,
+        "lightning_type": "lightning__textType",
+        "default": null
+      },
+      "shape": {
+        "required": false,
+        "lightning_type": "lightning__textType",
+        "default": "circle",
+        "enum": [
+          "circle",
+          "square",
+          "rounded"
+        ]
+      },
+      "size": {
+        "required": false,
+        "lightning_type": "lightning__textType",
+        "default": "md",
+        "enum": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ]
+      },
+      "src": {
+        "required": false,
+        "lightning_type": "lightning__urlType",
+        "default": null
+      }
+    },
+    "soft_required": [],
+    "source": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/avatar.html"
+  },
+  "tile/badge": {
+    "properties": {
+      "label": {
+        "required": true,
+        "lightning_type": "lightning__textType",
+        "default": null
+      },
+      "variant": {
+        "required": false,
+        "lightning_type": "lightning__textType",
+        "default": "secondary",
+        "enum": [
+          "error",
+          "info",
+          "outline",
+          "primary",
+          "secondary",
+          "success",
+          "warning"
+        ]
+      }
+    },
+    "soft_required": [],
+    "source": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/badge.html"
+  },
+  "tile/button": {
+    "properties": {
+      "actions": {
+        "required": false,
+        "lightning_type": "lightning__textType",
+        "default": null,
+        "runtime_shape": "event-to-array object"
+      },
+      "iconName": {
+        "required": false,
+        "lightning_type": "lightning__iconName",
+        "default": null
+      },
+      "label": {
+        "required": true,
+        "lightning_type": "lightning__textType",
+        "default": null
+      },
+      "variant": {
+        "required": false,
+        "lightning_type": "lightning__textType",
+        "default": "primary",
+        "enum": [
+          "primary",
+          "secondary",
+          "destructive"
+        ]
+      }
+    },
+    "soft_required": [],
+    "source": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/button.html"
+  },
+  "tile/callout": {
+    "properties": {
+      "description": {
+        "required": false,
+        "lightning_type": "lightning__textType",
+        "default": null
+      },
+      "iconAlt": {
+        "required": false,
+        "lightning_type": "lightning__textType",
+        "default": null
+      },
+      "title": {
+        "required": true,
+        "lightning_type": "lightning__textType",
+        "default": null
+      },
+      "variant": {
+        "required": false,
+        "lightning_type": "lightning__textType",
+        "default": "default",
+        "enum": [
+          "default",
+          "error",
+          "info",
+          "note",
+          "success",
+          "tip",
+          "warning"
+        ]
+      }
+    },
+    "soft_required": [],
+    "source": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/callout.html"
+  },
+  "tile/code": {
+    "properties": {
+      "code": {
+        "required": true,
+        "lightning_type": "lightning__multilineTextType",
+        "default": null
+      },
+      "language": {
+        "required": false,
+        "lightning_type": "lightning__textType",
+        "default": null
+      }
+    },
+    "soft_required": [],
+    "source": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/code.html"
+  },
+  "tile/column": {
+    "properties": {
+      "align": {
+        "required": true,
+        "lightning_type": "lightning__alignmentType",
+        "default": null,
+        "enum": [
+          "start",
+          "center",
+          "end",
+          "stretch"
+        ]
+      },
+      "gap": {
+        "required": true,
+        "lightning_type": "lightning__gapType",
+        "default": null,
+        "enum": [
+          "none",
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ]
+      },
+      "width": {
+        "required": false,
+        "lightning_type": "lightning__extentType",
+        "default": null,
+        "enum": [
+          "auto",
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl",
+          "full",
+          "stretch"
+        ]
+      }
+    },
+    "soft_required": [
+      "align",
+      "gap"
+    ],
+    "source": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/column.html"
+  },
+  "tile/container": {
+    "properties": {
+      "borderless": {
+        "required": false,
+        "lightning_type": "lightning__booleanType",
+        "default": "false"
+      },
+      "variant": {
+        "required": false,
+        "lightning_type": "lightning__textType",
+        "default": "default",
+        "enum": [
+          "default",
+          "emphasis",
+          "info",
+          "warning",
+          "error",
+          "success"
+        ]
+      }
+    },
+    "soft_required": [],
+    "source": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/container.html"
+  },
+  "tile/icon": {
+    "properties": {
+      "alt": {
+        "required": false,
+        "lightning_type": "lightning__textType",
+        "default": null
+      },
+      "color": {
+        "required": false,
+        "lightning_type": "lightning__textType",
+        "default": "default",
+        "enum": [
+          "default",
+          "error",
+          "muted",
+          "primary",
+          "success",
+          "warning"
+        ]
+      },
+      "name": {
+        "required": true,
+        "lightning_type": "lightning__iconName",
+        "default": null
+      },
+      "size": {
+        "required": false,
+        "lightning_type": "lightning__textType",
+        "default": "md",
+        "enum": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ]
+      }
+    },
+    "soft_required": [],
+    "source": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/icon.html"
+  },
+  "tile/image": {
+    "properties": {
+      "alt": {
+        "required": true,
+        "lightning_type": "lightning__textType",
+        "default": null
+      },
+      "size": {
+        "required": false,
+        "lightning_type": "lightning__textType",
+        "default": "auto",
+        "enum": [
+          "auto",
+          "sm",
+          "md",
+          "lg",
+          "full"
+        ]
+      },
+      "src": {
+        "required": true,
+        "lightning_type": "lightning__urlType",
+        "default": null
+      }
+    },
+    "soft_required": [],
+    "source": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/image.html"
+  },
+  "tile/link": {
+    "properties": {
+      "href": {
+        "required": true,
+        "lightning_type": "lightning__urlType",
+        "default": null
+      },
+      "text": {
+        "required": false,
+        "lightning_type": "lightning__textType",
+        "default": null
+      },
+      "underline": {
+        "required": false,
+        "lightning_type": "lightning__textType",
+        "default": "hover",
+        "enum": [
+          "always",
+          "hover",
+          "none"
+        ]
+      },
+      "variant": {
+        "required": false,
+        "lightning_type": "lightning__textType",
+        "default": "primary",
+        "enum": [
+          "default",
+          "muted",
+          "primary"
+        ]
+      }
+    },
+    "soft_required": [],
+    "source": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/link.html"
+  },
+  "tile/list": {
+    "properties": {
+      "marker": {
+        "required": false,
+        "lightning_type": "lightning__textType",
+        "default": "none",
+        "enum": [
+          "none",
+          "bullet",
+          "number"
+        ]
+      }
+    },
+    "soft_required": [],
+    "source": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/list.html"
+  },
+  "tile/listItem": {
+    "properties": {},
+    "soft_required": [],
+    "source": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/listItem.html"
+  },
+  "tile/markdown": {
+    "properties": {
+      "source": {
+        "required": true,
+        "lightning_type": "lightning__markdownTextType",
+        "default": null
+      }
+    },
+    "soft_required": [],
+    "source": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/markdown.html"
+  },
+  "tile/progress": {
+    "properties": {
+      "color": {
+        "required": false,
+        "lightning_type": "lightning__textType",
+        "default": "default",
+        "enum": [
+          "default",
+          "error",
+          "primary",
+          "success",
+          "warning"
+        ]
+      },
+      "label": {
+        "required": true,
+        "lightning_type": "lightning__textType",
+        "default": null
+      },
+      "max": {
+        "required": false,
+        "lightning_type": "lightning__numberType",
+        "default": null
+      },
+      "shape": {
+        "required": false,
+        "lightning_type": "lightning__textType",
+        "default": "linear",
+        "enum": [
+          "linear",
+          "circular"
+        ]
+      },
+      "size": {
+        "required": true,
+        "lightning_type": "lightning__sizeType",
+        "default": null,
+        "enum": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ]
+      },
+      "value": {
+        "required": false,
+        "lightning_type": "lightning__numberType",
+        "default": "0"
+      }
+    },
+    "soft_required": [
+      "size"
+    ],
+    "source": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/progress.html"
+  },
+  "tile/row": {
+    "properties": {
+      "align": {
+        "required": false,
+        "lightning_type": "lightning__alignmentType",
+        "default": "center",
+        "enum": [
+          "start",
+          "center",
+          "end",
+          "stretch"
+        ]
+      },
+      "gap": {
+        "required": true,
+        "lightning_type": "lightning__gapType",
+        "default": null,
+        "enum": [
+          "none",
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ]
+      },
+      "isWrapped": {
+        "required": false,
+        "lightning_type": "lightning__booleanType",
+        "default": "true"
+      },
+      "justify": {
+        "required": false,
+        "lightning_type": "lightning__textType",
+        "default": "start",
+        "enum": [
+          "start",
+          "center",
+          "end",
+          "between",
+          "around",
+          "evenly"
+        ]
+      }
+    },
+    "soft_required": [
+      "gap"
+    ],
+    "source": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/row.html"
+  },
+  "tile/separator": {
+    "properties": {
+      "orientation": {
+        "required": false,
+        "lightning_type": "lightning__textType",
+        "default": "horizontal",
+        "enum": [
+          "horizontal",
+          "vertical"
+        ]
+      }
+    },
+    "soft_required": [],
+    "source": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/separator.html"
+  },
+  "tile/spacer": {
+    "properties": {
+      "size": {
+        "required": false,
+        "lightning_type": "lightning__textType",
+        "default": "md",
+        "enum": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl",
+          "fill"
+        ]
+      }
+    },
+    "soft_required": [],
+    "source": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/spacer.html"
+  },
+  "tile/spinner": {
+    "properties": {
+      "label": {
+        "required": true,
+        "lightning_type": "lightning__textType",
+        "default": null
+      },
+      "size": {
+        "required": false,
+        "lightning_type": "lightning__textType",
+        "default": "md",
+        "enum": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ]
+      }
+    },
+    "soft_required": [],
+    "source": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/spinner.html"
+  },
+  "tile/table": {
+    "properties": {
+      "appearance": {
+        "required": false,
+        "lightning_type": "lightning__textType",
+        "default": "default",
+        "enum": [
+          "default",
+          "bordered",
+          "striped"
+        ]
+      },
+      "caption": {
+        "required": true,
+        "lightning_type": "lightning__textType",
+        "default": null
+      },
+      "columns": {
+        "required": true,
+        "lightning_type": "lightning__listType",
+        "default": null
+      },
+      "isStickyHeader": {
+        "required": false,
+        "lightning_type": "lightning__booleanType",
+        "default": "false"
+      },
+      "pagination": {
+        "required": false,
+        "lightning_type": "lightning__objectType",
+        "default": null
+      },
+      "rows": {
+        "required": true,
+        "lightning_type": "lightning__listType",
+        "default": null
+      },
+      "size": {
+        "required": false,
+        "lightning_type": "lightning__textType",
+        "default": "md",
+        "enum": [
+          "sm",
+          "md"
+        ]
+      },
+      "sort": {
+        "required": false,
+        "lightning_type": "lightning__objectType",
+        "default": null
+      }
+    },
+    "soft_required": [],
+    "source": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/table.html"
+  },
+  "tile/text": {
+    "properties": {
+      "color": {
+        "required": false,
+        "lightning_type": "lightning__textType",
+        "default": "default"
+      },
+      "isItalic": {
+        "required": false,
+        "lightning_type": "lightning__booleanType",
+        "default": "false"
+      },
+      "isStrikethrough": {
+        "required": false,
+        "lightning_type": "lightning__booleanType",
+        "default": "false"
+      },
+      "text": {
+        "required": true,
+        "lightning_type": "lightning__multilineTextType",
+        "default": null
+      },
+      "variant": {
+        "required": false,
+        "lightning_type": "lightning__textType",
+        "default": "body",
+        "enum": [
+          "body",
+          "caption",
+          "code",
+          "h1",
+          "h2",
+          "h3",
+          "h4",
+          "h5",
+          "h6"
+        ]
+      },
+      "weight": {
+        "required": false,
+        "lightning_type": "lightning__textType",
+        "default": null
+      }
+    },
+    "soft_required": [],
+    "source": "https://developer.salesforce.com/docs/platform/hxl/references/hxl-reference-about/text.html"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "title": "Account Summary",
+  "description": "Account information for conversational review",
+  "fields": [
+    {"name": "name", "title": "Account", "lightning:type": "lightning__textType", "sample": "Acme Manufacturing"},
+    {"name": "industry", "title": "Industry", "lightning:type": "lightning__textType", "sample": "Manufacturing"},
+    {"name": "annualRevenue", "title": "Annual revenue", "lightning:type": "lightning__numberType", "sample": 12500000},
+    {"name": "website", "title": "Website", "lightning:type": "lightning__urlType", "sample": "https://example.com"}
+  ]
+}
