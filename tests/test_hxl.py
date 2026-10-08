@@ -7,7 +7,7 @@ import tempfile
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILL = ROOT / "skills/salesforce-hxl"
+SKILL = ROOT
 module_spec = importlib.util.spec_from_file_location("hxl_validate", SKILL / "scripts/validate.py")
 validator = importlib.util.module_from_spec(module_spec)
 module_spec.loader.exec_module(validator)
@@ -179,7 +179,7 @@ class HXLTests(unittest.TestCase):
         args = [sys.executable, str(ROOT / "tools/install_skill.py"), "--skills-dir", str(dest)]
         first = subprocess.run(args, capture_output=True, text=True)
         self.assertEqual(first.returncode, 0, first.stderr)
-        call = subprocess.run([sys.executable, str(dest / "salesforce-hxl/scripts/scaffold.py"), "--project", str(self.project), "--widget", "installedWidget"], capture_output=True, text=True)
+        call = subprocess.run([sys.executable, str(dest / "sf-hxl/scripts/scaffold.py"), "--project", str(self.project), "--widget", "installedWidget"], capture_output=True, text=True)
         self.assertEqual(call.returncode, 0, call.stderr)
         second = subprocess.run(args, capture_output=True, text=True)
         self.assertNotEqual(second.returncode, 0)

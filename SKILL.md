@@ -1,9 +1,15 @@
 ---
-name: salesforce-hxl
-description: Create, connect, deploy, and troubleshoot Salesforce Headless Experience Layer (HXL) JSON widgets, UiWidgetBundles, and Lightning type renderers for Agentforce or hosted MCP clients such as ChatGPT, Claude, and Slackbot. Use for HXL authoring and integration, including formulas, repeated content, interactive actions, and platform component selection.
+name: sf-hxl
+description: Create, review, connect, deploy, and troubleshoot Salesforce Headless Experience Layer (HXL) JSON widgets, UiWidgetBundles, and Lightning type renderers for Agentforce or hosted MCP clients such as ChatGPT, Claude, and Slackbot. Use for HXL authoring and integration, including formulas, repeated content, interactive actions, and platform component selection.
+license: MIT
+metadata:
+  version: "1.0.0"
+  author: "Dylan Andersen"
+  sources: "Official Salesforce HXL, Lightning Types, and hosted MCP documentation"
+  inspiration: "dylandersen/sf-multiframework"
 ---
 
-# Salesforce HXL
+# sf-hxl
 
 Build source-based HXL experiences from the local references. This bundle distills the complete HXL guide and component-reference navigation plus implementation dependencies, captured 2026-10-08. Read selectively; use [sources](references/sources.md) for coverage and official URLs. No source checkout, SSO, or network is needed to author from this snapshot. HXL is beta, requiring API 67.0 or later.
 
@@ -19,6 +25,9 @@ Build source-based HXL experiences from the local references. This bundle distil
 | Set up, authenticate, deploy, retrieve, or package | [Org/deployment](references/org-deployment.md) |
 | Preview, share, import, or use Agentforce Vibes | [Playground/Vibes](references/playground-vibes.md) |
 | Diagnose rendering, binding, access, or channel problems | [Troubleshooting](references/troubleshooting.md) |
+| Review an HXL change or assess implementation quality | [100-point rubric](references/scoring-rubric.md) |
+
+For React apps deployed as `UIBundle`, use [sf-multiframework](https://github.com/dylandersen/sf-multiframework). HXL uses `UiWidgetBundle` JSON compositions; it does not use React/Vite bundles. Optional companion workflows are described in [integration boundaries](references/companion-workflows.md).
 
 ## Produce useful artifacts
 

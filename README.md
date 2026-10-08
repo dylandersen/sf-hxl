@@ -1,30 +1,77 @@
-# Salesforce Headless Experience Layer skill
+# sf-hxl
 
-`$salesforce-hxl` helps create HXL widgets and connect them to Agentforce action output or Salesforce hosted MCP tools. The source is [skills/salesforce-hxl/SKILL.md](skills/salesforce-hxl/SKILL.md).
+🧩 **Salesforce Headless Experience Layer skill** — by Dylan Andersen · **v1.0**
 
-The entrypoint is 432 words; larger material is loaded selectively from local references. Coverage includes every published HXL guide/reference navigation topic: 21 guide pages, 25 reference pages, 22 beta components, 19 HXL Lightning types, and 23 supporting platform pages. The 2026-10-08 beta snapshot requires API 67.0+. References distill implementation facts and workflows with original examples; the skill does not require network access, the source checkout, or SSO for authoring.
+An agent skill that teaches your AI coding agent to build, connect, and deploy **HXL widgets on the Salesforce Agentforce 360 Platform** (`UiWidgetBundle`) — JSON composition, typed data bindings, formulas, interactive actions, Agentforce output rendering, and hosted MCP integration for ChatGPT, Claude, and Slackbot — plus a 100-point rubric for reviewing its output.
 
-Install with Python 3.10 or later:
+> Format and skill conventions inspired by [sf-multiframework](https://github.com/dylandersen/sf-multiframework). Built from official [Salesforce documentation](references/sources.md): every HXL guide and reference topic, plus the Lightning Types and hosted MCP contracts needed to wire the experience. Documentation is distilled into local references, so authoring works without browsing the source site. Works with coding agents and IDEs that support agent skills.
+
+## Install
+
+```bash
+npx skills add dylandersen/sf-hxl --global
+```
+
+For a direct Codex installation from a local checkout:
 
 ```bash
 python3 tools/install_skill.py
 ```
 
-This creates `~/.codex/skills/salesforce-hxl` (or `$CODEX_HOME/skills/salesforce-hxl`) and refuses to overwrite an existing installation. Open a new Codex chat if the installed skill is not yet discovered.
+The Python installer targets `$CODEX_HOME/skills/sf-hxl` or `~/.codex/skills/sf-hxl` and preserves existing installations. Open a new chat if your agent has not discovered the newly installed skill.
 
-Example invocation:
+## When to use it
 
-> Use $salesforce-hxl to create an account-summary widget for Agentforce, with typed revenue and a follow-up button, using the structured output in my DX project.
+Your agent should reach for this skill whenever you ask it to scaffold, build, review, connect, or deploy a Salesforce HXL / `UiWidgetBundle` experience — for example “build an HXL account-summary card,” “render this Agentforce action as a widget,” or “connect my Apex invocable tool to a widget in Claude.”
 
-The skill's scaffold supports static, Agentforce, and MCP modes without Salesforce access. Its local checker validates source contracts and integration wiring. Apex implementation, Salesforce deployment validation, org configuration, OAuth, and native client rendering remain separate stages.
+Invoke it directly in Codex with `$sf-hxl`. Use [sf-multiframework](https://github.com/dylandersen/sf-multiframework) for React apps deployed as `UIBundle`; HXL widgets are a separate declarative metadata model.
 
-Repository checks:
+## What's inside
+
+- **[SKILL.md](SKILL.md)** — the core authoring rules, workflow routing, and integration boundaries.
+- **[references/](references/)** — deep dives: composition, formulas, conditions and repetition, all 22 documented beta components, 19 HXL Lightning types, Agentforce, MCP resources/OAuth, deployment, Playground/Vibes, troubleshooting, and a [100-point review rubric](references/scoring-rubric.md).
+- **[assets/](assets/)** — a typed account-summary specification to adapt into generated widgets.
+- **[scripts/](scripts/)** — offline scaffolding for static, Agentforce, and MCP modes, plus source-contract validation.
+- **[tools/](tools/)** and **[tests/](tests/)** — installation, documentation/link checks, source-freshness checks, and regression tests for the helpers.
+
+## Compatibility
+
+Targets Salesforce **HXL Beta**, API **v67.0+**, using a Salesforce DX project and an org with **Headless Experience Layer** enabled. The official snapshot covers Agentforce Employee agents in Lightning Experience and MCP Apps-compatible experiences in ChatGPT, Claude, and Slackbot. HXL does not currently render through Slackbot Block Kit.
+
+Documentation snapshot: **October 8, 2026** — **21 guide pages + 25 reference pages + 23 supporting platform pages**. The complete HXL platform navigation is covered; external Playground tutorials, Help/release-note pages, and the rest of unrelated Salesforce manuals are not mirrored. See [sources and coverage](references/sources.md).
+
+Python **3.10+** runs the bundled helpers without third-party packages. Salesforce CLI and an authorized target org are needed for deployment. Local checks do not compile Apex or verify live native rendering.
+
+## What's New in v1.0
+
+- **Complete HXL reference coverage**: all published guide/reference navigation topics distilled into selectively loaded local files, with source URLs and hashes.
+- **Correct channel wiring**: direct Agentforce output mappings and separate MCP result-wrapper/payload CLTs, with a renderer at the type root.
+- **Offline scaffolding**: generate widget composition, schema, metadata XML, optional CLTs, and a focused deployment manifest without contacting Salesforce.
+- **Useful validation**: catch undeclared bindings, scope errors, malformed actions, incorrect MCP mappings, and mismatched server resources.
+- **Surface-specific guidance**: preserve Agentforce table limitations, image/CSP requirements, and documented beta inconsistencies.
+- **Evidence-based review**: a 100-point HXL rubric that separates source quality from deployment and runtime evidence.
+
+## Cross-Skill Workflow
+
+```text
+Apex / structured actions       ─┐
+Agentforce / hosted MCP tools   ─┤→  sf-hxl  →  metadata deployment
+Permissions / OAuth setup      ─┘              + target-channel verification
+```
+
+Companion skills are optional. `sf-hxl` owns the widget composition, UI contract, renderer mapping, and HXL integration checks; the backing business action, agent reasoning, and org access remain their own implementation tasks. See [integration boundaries](references/companion-workflows.md) and [CREDITS.md](CREDITS.md).
+
+## Validation
 
 ```bash
 python3 tools/check_bundle.py
 python3 -m unittest discover -s tests -v
 ```
 
-[Sources and coverage](skills/salesforce-hxl/references/sources.md) link every captured topic to an offline reference. [Provenance](skills/salesforce-hxl/references/provenance.json) stores URLs and source hashes. Check freshness selectively with `python3 tools/check_sources.py --contains hxl-widget-schema`; without the filter it checks all sources. HTML changes are review prompts, not automatic prose/schema updates.
+The helpers passed **21 regression tests** and an independent offline case-widget generation check. **195 local documentation links** and **71 source routes** pass the repository checks. No live Salesforce deployment or client-rendering test is claimed.
 
-Documentation scope is the entire HXL platform guide/reference tree and its needed implementation dependencies, not every Salesforce product manual. External Playground tutorials, Help/release-note pages, screenshots, and sample archives are not mirrored. Documented beta contradictions and surface limitations are preserved locally. Live org/client testing was not part of creating this repository.
+Check a source for drift with `python3 tools/check_sources.py --contains hxl-widget-schema`. Source HTML changes prompt a content review; they do not automatically rewrite the curated references.
+
+## License
+
+MIT — see [LICENSE](LICENSE). Salesforce documentation remains attributed to Salesforce; this repository supplies distilled guidance, original examples, and helper code.

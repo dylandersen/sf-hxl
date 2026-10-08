@@ -13,7 +13,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--contains", default="", help="Check only URLs containing this text")
     args = parser.parse_args()
-    provenance = json.loads((ROOT / "skills/salesforce-hxl/references/provenance.json").read_text())
+    provenance = json.loads((ROOT / "references/provenance.json").read_text())
     records = [r for r in provenance["sources"] if args.contains in r["url"]]
     if not records:
         parser.error("No matching source URLs")

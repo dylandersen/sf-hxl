@@ -14,13 +14,19 @@ def main():
     args = parser.parse_args()
     folder = args.skills_dir.expanduser().resolve()
     folder.mkdir(parents=True, exist_ok=True)
-    dest = folder / "salesforce-hxl"
+    dest = folder / "sf-hxl"
     if dest.exists() or dest.is_symlink():
         parser.error("Skill already exists; review changes before replacing it: " + str(dest))
     staging = Path(tempfile.mkdtemp(prefix=".hxl-install-", dir=folder))
     try:
-        copied = staging / "salesforce-hxl"
-        shutil.copytree(ROOT / "skills/salesforce-hxl", copied, ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
+        copied = staging / "sf-hxl"
+        copied.mkdir()
+        for name in ("SKILL.md", "LICENSE", "agents", "assets", "references", "scripts"):
+            source = ROOT / name
+            if source.is_dir():
+                shutil.copytree(source, copied / name, ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
+            else:
+                shutil.copy2(source, copied / name)
         copied.rename(dest)
     finally:
         shutil.rmtree(staging)

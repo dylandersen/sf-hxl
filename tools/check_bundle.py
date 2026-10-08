@@ -6,7 +6,7 @@ from pathlib import Path
 from urllib.parse import unquote
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILL = ROOT / "skills/salesforce-hxl"
+SKILL = ROOT
 
 def slug(text):
     text = re.sub(r"[`*_]", "", text).lower()
@@ -26,9 +26,9 @@ def main():
             path, _, anchor = target.partition("#")
             dest = (file.parent / unquote(path)).resolve() if path else file
             count += 1
-            if not dest.is_relative_to(SKILL) or not dest.is_file():
+            if not dest.is_relative_to(SKILL) or not dest.exists():
                 errors.append(f"{file.relative_to(ROOT)}: missing/escaping local link {target}")
-            elif anchor:
+            elif anchor and dest.is_file():
                 headings = {slug(line.lstrip("# ")) for line in dest.read_text().splitlines() if line.startswith("#")}
                 if anchor not in headings:
                     errors.append(f"{file.relative_to(ROOT)}: missing anchor {target}")
